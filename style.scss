@@ -1,3 +1,5 @@
+@import "./_variables.scss";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,44 +7,48 @@
 }
 
 body {
-  background-color: hsl(30deg, 38%, 92%);
+  background-color: $Cream;
   height: calc(100vh - 20px);
 }
-
 .contenedor {
-  background-color: hsl(0deg, 0%, 100%);
+  p {
+    font-size: 14px;
+    font-family: $Mon;
+    color: $Dark-grayish-blue;
+  }
+  h1 {
+    font-family: $Fra;
+    text-align: left;
+    margin-top: 10px;
+    line-height: 30px;
+  }
+  .texto {
+    padding: 25px 25px 0 25px;
+    line-height: 25px;
+  }
+
+  background-color: $White;
   border-radius: 15px;
   margin: 20px 15px;
-}
-.contenedor p {
-  font-size: 14px;
-  font-family: "Montserrat", sans-serif;
-  color: hsl(228deg, 12%, 48%);
-}
-.contenedor h1 {
-  font-family: "Fraunces", serif;
-  text-align: left;
-  margin-top: 10px;
-  line-height: 30px;
-}
-.contenedor .texto {
-  padding: 25px 25px 0 25px;
-  line-height: 25px;
-}
-.contenedor .texto__descripcion {
-  margin-top: 15px;
-}
-.contenedor .texto__precio {
-  font-size: 30px;
-  font-family: "Fraunces", serif;
-  color: hsl(158deg, 36%, 37%);
-  display: inline-flex;
-  flex-direction: row;
-}
-.contenedor .texto__precio-descuento {
-  text-decoration: line-through;
-  display: inline-flex;
-  margin-left: 30px;
+
+  .texto__descripcion {
+    margin-top: 15px;
+    // text-anchor: middle;
+  }
+
+  .texto__precio {
+    font-size: 30px;
+    font-family: $Fra;
+    color: $Dark-cyan;
+    display: inline-flex;
+    flex-direction: row;
+  }
+
+  .texto__precio-descuento {
+    text-decoration: line-through;
+    display: inline-flex;
+    margin-left: 30px;
+  }
 }
 
 .imagen-contenedor {
@@ -65,11 +71,11 @@ body {
   margin: auto;
   align-self: flex-end;
   width: 90%;
-  background-color: hsl(158deg, 36%, 37%);
+  background-color: $Dark-cyan;
   border: none;
   border-radius: 10px;
-  color: hsl(0deg, 0%, 100%);
-  font-family: "Montserrat", sans-serif;
+  color: $White;
+  font-family: $Mon;
   font-weight: bold;
 }
 
@@ -90,6 +96,7 @@ body {
   display: inline-flex;
   flex-wrap: nowrap;
   align-items: center;
+
 }
 
 .attribution {
@@ -97,28 +104,33 @@ body {
   display: flex;
   justify-content: center;
 }
-
 @media screen and (min-width: 768px) {
   .imagen-contenedor {
     height: 45vh;
     background-image: url("images/image-product-mobile.jpg");
   }
+
   .texto__name-item {
     font-size: 20px !important;
   }
+
   .texto__descripcion {
     font-size: 20px !important;
     margin-bottom: 1.3rem;
   }
 }
+
 @media screen and (min-width: 1024px) {
+
   body {
     position: relative;
   }
+
   .contenedor {
     display: grid;
     grid-template-columns: auto auto;
     width: 600px;
+    // margin: auto;
     align-content: center;
     position: absolute;
     top: 50%;
@@ -132,32 +144,37 @@ body {
     height: 450px;
     border-radius: 15px 0 0 15px;
   }
+
   .texto {
     width: 300px;
     display: inline;
     padding: 0;
     grid-column: auto;
-  }
+  }  
+
   .contenedor__btn {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  .texto__name-item {
+
+  .texto__name-item{
     font-size: 13px !important;
   }
+
   h1 {
     font-size: 34px;
     margin-top: 15px !important;
   }
+
   .texto__descripcion {
     margin-top: 20px !important;
     font-size: 15px !important;
   }
+
   .texto__precio {
     font-size: 32px !important;
   }
-}
 
-/*# sourceMappingURL=style.css.map */
+}
