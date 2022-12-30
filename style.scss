@@ -33,7 +33,6 @@ body {
 
   .texto__descripcion {
     margin-top: 15px;
-    // text-anchor: middle;
   }
 
   .texto__precio {
@@ -84,6 +83,11 @@ body {
   letter-spacing: 10px;
 }
 
+.add_to_cart:hover {
+  background-color: $Very-dark-blue;
+  cursor: pointer;
+}
+
 .texto__name-item {
   margin-top: -5px;
   letter-spacing: 4px;
@@ -96,7 +100,6 @@ body {
   display: inline-flex;
   flex-wrap: nowrap;
   align-items: center;
-
 }
 
 .attribution {
@@ -121,7 +124,6 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
-
   body {
     position: relative;
   }
@@ -130,7 +132,6 @@ body {
     display: grid;
     grid-template-columns: auto auto;
     width: 600px;
-    // margin: auto;
     align-content: center;
     position: absolute;
     top: 50%;
@@ -150,7 +151,7 @@ body {
     display: inline;
     padding: 0;
     grid-column: auto;
-  }  
+  }
 
   .contenedor__btn {
     width: 100%;
@@ -159,7 +160,7 @@ body {
     justify-content: center;
   }
 
-  .texto__name-item{
+  .texto__name-item {
     font-size: 13px !important;
   }
 
@@ -176,5 +177,4 @@ body {
   .texto__precio {
     font-size: 32px !important;
   }
-
 }
