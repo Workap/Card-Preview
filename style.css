@@ -78,6 +78,11 @@ body {
   letter-spacing: 10px;
 }
 
+.add_to_cart::hover {
+  background-color: hsl(212, 21%, 14%);
+  cursor: pointer;
+}
+
 .texto__name-item {
   margin-top: -5px;
   letter-spacing: 4px;
